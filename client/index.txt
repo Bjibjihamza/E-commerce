@@ -1,0 +1,52 @@
+import React from "react";
+import Slider from "react-slick";
+import img from '../../assets/images/img_1.jpg';
+
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/swiper-bundle.min.css";
+import "swiper/swiper.min.css";
+import { Navigation, Autoplay } from "swiper";
+
+const HomeBanner = () => {
+
+    var settings = {
+        dots: false,
+        infinite: true,
+        speed: 500,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        arrows:true,
+        autoplay:true,
+
+      };
+
+    return(
+        <>
+        <div className="container mt-3" >
+            <div className="homeBannerSection" >
+                    <Slider {...settings} >
+                        <div className="item" >
+                            <img src={img} className="w-100"/>
+                        </div>
+                        <div className="item" >
+                            <img src={img} className="w-100"/>
+                        </div>
+                        <div className="item" >
+                            <img src={img} className="w-100"/>
+                        </div>
+                        <div className="item" >
+                            <img src={img} className="w-100"/>
+                        </div>
+                        <div className="item" >
+                            <img src={img} className="w-100"/>
+                        </div>
+                    </Slider>
+            </div>
+        </div>
+            
+        </>
+    )
+}
+
+export default HomeBanner;
